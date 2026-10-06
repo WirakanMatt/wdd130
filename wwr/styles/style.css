@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&family=Patrick+Hand&display=swap');
+
+/* Part 2: Body Reset and Fonts */
+body {
+    font-family: "Edu QLD Hand", cursive, sans-serif;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+    background-color: #F7FFF7;
+}
+
+h2 {
+    margin: 0;
+}
+
+/* Part 1: Page Container and Centering */
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+nav a, #hero-msg h1, #hero-msg h4, .button-box, main section {
+    text-align: center;
+}
+
+/* Header & Nav */
+header {
+    background-color: #1a535c;
+}
+
+#logo_link {
+    padding-top: 5px;
+}
+
+.logo {
+    width: 80px;
+}
+
+nav a {
+    color: #F7FFF7;
+    text-decoration: none;
+    padding: 35px;
+}
+
+nav a:hover {
+    background-color: #FF6B6B;
+    color: #F7FFF7;
+    padding: 13px 35px;
+}
+
+/* Hero */
+#hero-img {
+    width: 100%;
+}
+
+.home-title {
+    font-family: "Patrick Hand", sans-serif;
+    font-size: 2em;
+    margin-top: 10px;
+    color: #1a535c;
+}
+
+h4 {
+    color: #1a535c;
+}
+
+.book, .join {
+    background-color: #FF6B6B;
+    color: #F7FFF7;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+.book:hover, .join:hover {
+    background-color: #1a535c;
+    color: #F7FFF7;
+}
+
+/* Main Content & Cards */
+.icon {
+    width: 80px;
+    padding-top: 10px;
+}
+
+.rivers-card, .camping-card, .rapids-card {
+    margin: 200px 0;
+}
+
+.card-img {
+    border: 10px solid #1a535c;
+}
+
+main section img {
+    box-sizing: border-box;
+}
+
+#background {
+    height: 725px;
+    background-color: #1a535c;
+}
+
+.msg {
+    background-color: #FF6B6B;
+    padding: 35px;
+    line-height: 1.5em;
+}
+
+.msg h2 {
+    font-family: "Patrick Hand", sans-serif;
+    color: #F7FFF7;
+}
+
+.msg p {
+    font-size: 0.8em;
+    padding-bottom: 15px;
+    color: #F7FFF7;
+}
+
+/* Footer */
+footer {
+    background-color: #1a535c;
+    padding: 25px 50px;
+    margin-top: 200px;
+}
+
+footer p {
+    font-size: 1.2em;
+    color: #F7FFF7;
+}
+
+footer a {
+    color: #F7FFF7;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .social img {
+    padding-top: 15px;
+}
