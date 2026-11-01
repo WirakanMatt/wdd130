@@ -74,7 +74,7 @@
             display: grid;
             grid-template-columns: 4fr 1fr 7fr;
             grid-template-rows: 5fr 2fr 5fr;
-            background-color: white; /* The white background serves as the cross */
+            background-color: white;
             width: 300px;
             height: 200px;
             font-size: 1.1rem;
@@ -215,7 +215,7 @@
     background-color: #ffce00;
 }
 
-/* Vertical red stripe cutting from row 1 to row 5 */
+
 #carred {
     grid-row: 1 / 5;
     grid-column: 2 / 3;
@@ -223,7 +223,7 @@
     z-index: 2; /* Sits over the horizontal stripes */
 }
 
-/* Yellow Star in top-left */
+
 #car-star {
     width: 45px;
     aspect-ratio: 1;
