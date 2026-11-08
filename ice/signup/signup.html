@@ -10,7 +10,6 @@
 <body>
     <main class="signup-container">
         <div id="formContainer">
-            <!-- 1. Moved close button here out of the form grid -->
             <button type="button" id="closeBtn">X</button>
             
             <h3>Sign Up for Daily Scripture Feed</h3>
@@ -31,7 +30,6 @@
                     <label for="female"><input type="radio" id="female" name="gender" value="female" required> Female</label>
                 </div>
 
-                <!-- 2. Added full-col class so these span properly below the fields -->
                 <section class="full-col checkbox-group">
                     <input type="checkbox" id="newsletter" name="newsletter">
                     <label for="newsletter">Subscribe to newsletter</label>
@@ -46,13 +44,12 @@
                     <button type="submit">Submit</button>
                 </section>
             </form>
-        </div> <!-- Fixed: close #formContainer before closing main -->
+        </div> 
     </main>
 
     <div id="output"></div>
 
     <script>
-        // Javascript from starter file
         document.getElementById("closeBtn").addEventListener("click", function () {
             document.getElementById("formContainer").style.display = "none";
         });
