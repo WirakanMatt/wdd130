@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In-Class Exercises (ICE) | WDD 130</title>
+    
+    <!-- 1. Import your portal Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&family=Patrick+Hand&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="Portal Page/portalpage.css">
+    
+    <style>
+        :root {
+            --bg-color: #FAF6F0;
+            --primary-color: #15182C;
+            --secondary-color: #D8C78D;
+            --accent-color: #34131E;
+            --text-color: #65625A;
+            --heading-font: "Patrick Hand", sans-serif;
+            --body-font: "Edu QLD Hand", cursive, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--body-font);
+            font-size: 1.15rem;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading-font);
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        #content {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 15px rgba(21, 24, 44, 0.08);
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--primary-color);
+            padding: 1.5rem 1rem 1rem;
+            text-align: center;
+        }
+
+        .logo {
+            width: 110px;
+            height: auto;
+            display: block;
+            margin: 0 auto 1rem auto;
+            border-radius: 8px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            background-color: var(--secondary-color);
+            padding: 0.75rem;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-family: var(--heading-font);
+            font-size: 1.3rem;
+            padding: 6px 16px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+        }
+
+        /* Main Content */
+        .ice-main {
+            flex: 1;
+            padding: 2.5rem 2rem;
+            display: block !important;
+        }
+
+        .ice-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .ice-intro h1 {
+            font-size: 2.5rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .ice-intro p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* 6-Card Responsive Grid */
+        .ice-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+            gap: 1.75rem;
+            align-items: stretch;
+            width: 100%;
+        }
+
+        .ice-card {
+            background-color: var(--bg-color);
+            border: 1px solid rgba(101, 98, 90, 0.2);
+            border-top: 5px solid var(--secondary-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 10px rgba(21, 24, 44, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .ice-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 18px rgba(21, 24, 44, 0.12);
+            border-top-color: var(--accent-color);
+        }
+
+        .ice-card h2 {
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.4rem;
+        }
+
+        .ice-desc {
+            font-size: 1.05rem;
+            line-height: 1.5;
+            color: var(--text-color);
+            margin: 0 0 1rem 0;
+        }
+
+        .ice-learned {
+            background-color: #ffffff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 0.65rem 0.85rem;
+            border-radius: 0 4px 4px 0;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #333333;
+            margin: 0 0 1.25rem 0;
+        }
+
+        .ice-learned code {
+            font-family: monospace;
+            background-color: #ece8df;
+            padding: 1px 5px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            color: var(--primary-color);
+        }
+
+        .ice-card a.btn {
+            align-self: flex-start;
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--bg-color) !important;
+            text-decoration: none;
+            font-family: var(--heading-font);
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
+            padding: 8px 18px;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+
+        .ice-card a.btn:hover {
+            background-color: var(--accent-color);
+            color: #ffffff !important;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            text-align: center;
+            padding: 1.5rem 1rem;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0.3rem 0;
+            font-size: 1.1rem;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <header>
+            <a id="logo_link" href="index.html">
+                <img class="logo" src="Portal Page/My logo 2.png" alt="M.S Pro Logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="wwr/index.html">WWR</a>
+                <a href="ice.html" class="active">ICE</a>
+                <a href="about.html">About Me</a>
+            </nav>
+        </header>
+
+        <main class="ice-main">
+            <section class="ice-intro">
+                <h1>In-Class Exercises (ICE)</h1>
+                <p>A collection of front-end exercises completed throughout WDD 130 exploring semantic HTML, CSS Grid, Flexbox, image optimization, and interactive forms.</p>
+            </section>
+
+            <div class="ice-grid">
+                <!-- Challenge 1: Prophet Card (W5) -->
+                <article class="ice-card">
+                    <div>
+                        <h2>Prophet Profile Card</h2>
+                        <p class="ice-desc">Built a biographical card for President Dallin H. Oaks based on a visual wireframe design.</p>
+                        <p class="ice-learned"><strong>What I learned:</strong> Converting wireframes into semantic markup with <code>&lt;ul&gt;</code> lists, box-shadows, custom cursive fonts, and Flexbox card centering.</p>
+                    </div>
+                    <a class="btn" href="ice/prophets_cards/oaks.html" target="_blank" rel="noopener noreferrer">View Prophet Card &rarr;</a>
+                </article>
+
+                <!-- Challenge 2: Favorite Devotionals (W6) -->
+                <article class="ice-card">
+                    <div>
+                        <h2>Favorite BYU-I Devotionals</h2>
+                        <p class="ice-desc">Created a devotional schedule and user contribution form styled with BYU-Idaho branding colors.</p>
+                        <p class="ice-learned"><strong>What I learned:</strong> Building semantic data tables (<code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, alternating row fills) and styled form fieldsets.</p>
+                    </div>
+                    <a class="btn" href="ice/favdevo.html" target="_blank" rel="noopener noreferrer">View Devotionals &rarr;</a>
+                </article>
+
+                <!-- Challenge 3: CSS Positioning Activity (W7) -->
+                <article class="ice-card">
+                    <div>
+                        <h2>CSS Positioning Exercises</h2>
+                        <p class="ice-desc">Solved six layout puzzles matching visual reference targets without modifying HTML.</p>
+                        <p class="ice-learned"><strong>What I learned:</strong> Applying 2D grid spanning, staggered diagonal steps, text wrapping with <code>float: left</code>, and coordinate layering with <code>z-index</code>.</p>
+                    </div>
+                    <a class="btn" href="ice/positioning.html" target="_blank" rel="noopener noreferrer">View Positioning &rarr;</a>
+                </article>
+
+                <!-- Challenge 4: Grid Flags (W7) -->
+                <article class="ice-card">
+                    <div>
+                        <h2>Country Flags with CSS Grid</h2>
+                        <p class="ice-desc">Assembled national flags (Chile, Denmark, Finland, Benin, Italy, and C.A.R.) with pure CSS Grid.</p>
+                        <p class="ice-learned"><strong>What I learned:</strong> Precise fractional tracks (<code>fr</code>), multi-row spanning, custom SVG star clip paths, and overlapping stripe positioning.</p>
+                    </div>
+                    <a class="btn" href="ice/flags.html" target="_blank" rel="noopener noreferrer">View Flags &rarr;</a>
+                </article>
+
+                <!-- Challenge 5: Image Gallery Issues (W8) -->
+                <article class="ice-card">
+                    <div>
+                        <h2>Christ Art Gallery</h2>
+                        <p class="ice-desc">Constructed a 4-column responsive artwork gallery showcasing performance-optimized image assets.</p>
+                        <p class="ice-learned"><strong>What I learned:</strong> Web performance techniques separating small thumbnails from full-resolution photos, custom cursor styling with <code>cursor: url()</code>, and hover opacity transitions.</p>
+                    </div>
+                    <a class="btn" href="ice/gallery.html" target="_blank" rel="noopener noreferrer">View Gallery &rarr;</a>
+                </article>
+
+                <!-- Challenge 6: Daily Feed Sign Up (W8) -->
+                <article class="ice-card">
+                    <div>
+                        <h2>Daily Scripture Feed Signup</h2>
+                        <p class="ice-desc">Styled a clean subscription card featuring radio buttons, checkboxes, and interactive feedback.</p>
+                        <p class="ice-learned"><strong>What I learned:</strong> Structuring form inputs with a 2-column grid, aligning radio groups, absolute close button positioning, and handling client-side submissions with <code>FormData</code> and <code>event.preventDefault()</code>.</p>
+                    </div>
+                    <a class="btn" href="ice/signup.html" target="_blank" rel="noopener noreferrer">View Signup Form &rarr;</a>
+                </article>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Matheus Proenca | M.S Pro Wedding Violin & Audio | WDD 130 Portal</p>
+            <p><a href="index.html">Home</a> | <a href="wwr/index.html">WWR</a> | <a href="ice.html">ICE</a> | <a href="about.html">About Me</a></p>
+        </footer>
+    </div>
+</body>
+</html>

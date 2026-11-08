@@ -1,0 +1,102 @@
+/* =========================================
+   ICE Page Layout & Cards
+========================================= */
+.ice-main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.ice-intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.ice-intro h1 {
+    color: #15182C;
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.ice-intro p {
+    color: #65625A;
+    font-size: 1.15rem;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.ice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.ice-card {
+    background-color: #FAF6F0;
+    border: 1px solid rgba(101, 98, 90, 0.25);
+    border-top: 5px solid #D8C78D;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(21, 24, 44, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ice-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(21, 24, 44, 0.16);
+    border-top-color: #34131E;
+}
+
+.ice-card h2 {
+    color: #15182C;
+    font-size: 1.35rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.ice-card .ice-desc {
+    color: #65625A;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.ice-card .ice-learned {
+    color: #65625A;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    background-color: #ffffff;
+    border-left: 3px solid #D8C78D;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 1.5rem;
+}
+
+.ice-card .ice-learned code {
+    background: #f0ede6;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+.ice-card a {
+    align-self: flex-start;
+    display: inline-block;
+    background-color: #15182C;
+    color: #FAF6F0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.ice-card a:hover {
+    background-color: #34131E;
+    color: #FAF6F0;
+}
