@@ -1,0 +1,100 @@
+/* General Page Reset & Spooky Atmosphere */
+body {
+    background-color: #0b090a;
+    color: #e5e5e5;
+    font-family: 'Creepster', 'Courier New', Courier, monospace, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #161a1d;
+    border: 3px solid #ff5400;
+    box-shadow: 0 0 25px rgba(255, 84, 0, 0.4);
+    padding: 20px;
+}
+
+/* Header & Spooky Navigation Bar */
+header {
+    background-color: #000;
+    padding: 15px;
+    border-bottom: 2px solid #ff5400;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    color: #ff5400;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+    color: #f5cb5c;
+    text-shadow: 0 0 8px #ff5400;
+}
+
+/* Main Content Styling */
+main {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+h1 {
+    color: #ff5400;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 20px;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    margin-bottom: 30px;
+}
+
+/* Sections (Pumpkins, Bats, Skeletons) */
+section {
+    background-color: #212529;
+    border-left: 5px solid #ff5400;
+    margin: 20px 0;
+    padding: 20px;
+    text-align: left;
+    border-radius: 0 6px 6px 0;
+}
+
+h2 {
+    color: #f5cb5c;
+    margin-top: 0;
+}
+
+p {
+    color: #adb5bd;
+    line-height: 1.6;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #000;
+    color: #ff5400;
+    font-weight: bold;
+    border-top: 2px solid #ff5400;
+    margin-top: 30px;
+}
